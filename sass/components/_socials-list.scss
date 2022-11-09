@@ -1,11 +1,55 @@
 @use "../utils/variables" as *;
 
+.socials-text {
+  display: none;
+  margin-top: 64px;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+
+  @media screen and (max-width: 767px) {
+    &{
+      display: flex;
+    }
+  }
+
+
+  &__item {
+    display: block;
+    height: 22px;
+    padding: 0 10px;
+    
+
+    &:not(:last-child){
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+  &__link {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 7px;
+    transition: text-decoration-color 250ms ease-in;
+
+    
+    .socials-text__item:hover &,
+    .socials-text__item:focus &  {
+      text-decoration-color: $blue-color;
+    }
+  }
+}
 .socials-list {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
-  padding: 0 32px 30px 32px;
+  width: 206px;
+  
 
+  &--team {
+    margin-top: 16px;
+  }
   &--footer {
     display: flex;
     width: 206px;
@@ -53,8 +97,8 @@
   }
 }
 .social-block {
-  margin-top: 12px;
-  margin-left: 70px;
+  margin-top: 60px;
+  text-align: center;
 
   &__header {
     text-transform: uppercase;
@@ -65,3 +109,4 @@
     color: $white-color;
   }
 }
+

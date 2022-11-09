@@ -1,9 +1,7 @@
 @use "../utils/variables" as *;
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   width: 200px;
   padding: 10px 0;
 
@@ -21,7 +19,13 @@
 
   @include transition(background-color);
 
-
+  @media screen and (min-width: 768px) {
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   &:hover {
     background-color: $button-hover-color;
   }
@@ -32,7 +36,10 @@
     }
   }
   &--subscription {
-    margin-left: 12px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &--hero {
     width: 216px;

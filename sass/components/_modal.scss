@@ -1,8 +1,7 @@
 @use "../utils/variables" as *;
 
 .modal-container {
-  margin-top: 30px;
-  padding: 0 40px;
+  padding: 40px;
   height: 100%;
 }
 .backdrop {
@@ -44,23 +43,41 @@
     transform: translate(-50%, -50%) scale(1.15);
   }  
   &__header {
-    margin-top: 40px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
     color: $black-color;
+    
+
+    @media screen and (max-width: 767px){
+      &{
+        line-height: 1.5;
+      }
+    }
+  }
+  @media screen and (max-width: 767px){
+    &{
+      width: 450px;
+      height: 609px;
+    }
   }
 }
 
 .modal-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 30px;
+  text-align: center;
 
 
+  @media screen and (min-width: 768px){
+    &{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
   &__item {
     position: relative;
     margin-bottom: 28px;
@@ -162,10 +179,17 @@
     margin-left: 8px;
 
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     color: $grey-color;
+
+    @media screen and (min-width: 768px){
+      &{
+        font-size: 14px;
+        line-height: 1.71;
+      }
+    }
   }
   &__link {
     text-decoration: underline;
@@ -177,7 +201,6 @@
 
     &--policy {
       display: flex;
-      justify-content: center;
       align-items: center;
     }
   }

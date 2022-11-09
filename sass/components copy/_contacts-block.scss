@@ -1,0 +1,78 @@
+@use "../utils/variables" as *;
+
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  
+  &--footer {
+    flex-direction: column;
+    display: flex;
+    margin-top: 20px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &--header:not(:last-child) {
+      margin-right: 50px;
+    }
+    &--footer {
+      margin-bottom: 9px;
+      font-style: normal;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+  
+    color: $grey-color;
+
+    @include transition(color);
+
+    &:hover {
+      color: $blue-color;
+    }
+    &:focus {
+      color: $blue-color;
+    }
+  }
+  &__icon {
+    margin-right: 10px;
+  
+    fill: $grey-color;
+
+    @include transition(fill);
+
+    .contacts-list__link:hover & {
+      fill: $blue-color;
+    }
+    .contacts-list__link:focus & {
+      fill: $blue-color;
+    }
+  }
+
+
+  &__link--footer{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    @include transition(color);
+  }
+  &__link--footer:focus {
+    color: $blue-color;
+  }
+  &__link--footer:hover {
+    color: $blue-color;
+  }
+  &__link--accent {
+    color: $white-color;
+  }
+}

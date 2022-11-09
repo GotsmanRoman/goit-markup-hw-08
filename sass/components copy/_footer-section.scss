@@ -1,0 +1,11 @@
+@use "../utils/variables" as *;
+
+.footer {
+  display: flex;
+}
+.footer-address {
+  display: inline-block;
+  width: 231px;
+}
+
+

@@ -2,9 +2,11 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footer-address {
-  display: inline-block;
+  text-align: center;
   width: 231px;
 }
 
