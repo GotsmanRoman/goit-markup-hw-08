@@ -35,8 +35,8 @@
     transition: text-decoration-color 250ms ease-in;
 
     
-    .socials-text__item:hover &,
-    .socials-text__item:focus &  {
+    &:hover,
+    &:focus {
       text-decoration-color: $blue-color;
     }
   }
@@ -97,9 +97,16 @@
   }
 }
 .social-block {
-  margin-top: 60px;
+
   text-align: center;
 
+
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 5px;
+  }
   &__header {
     text-transform: uppercase;
     font-size: 14px;

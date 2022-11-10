@@ -88,8 +88,8 @@
   &__link {
     transition: color 250ms ease-in;
 
-    .contacts-list__item:hover &,
-    .contacts-list__item:focus &{
+    &:hover,
+    &:focus {
       color: $blue-color;
     }
     &--accent {
@@ -97,6 +97,7 @@
     }
     @media screen and (min-width: 768px){
       display: flex;
+      align-items: center;
       gap: 8px;
     }
   }

@@ -27,9 +27,11 @@ body {
   color: $black-color;
 }
 .container {
-  padding: 0 15px 0 15px;
+  // width: 480px;
+  padding: 0 15px;
   margin: 0 auto;
   height: 100%;
+
 }
 .section {
   padding: 60px 0;
@@ -37,6 +39,12 @@ body {
   &--header {
     height: 60px;
 
+
+    @media screen and (min-width: 768px) {
+      & {
+        height: 80px;
+      }
+    }
     &--portfolio {
       border-bottom: 1px solid #ececec;
     }
@@ -171,7 +179,7 @@ body {
 }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1200px){
   @media (min-device-pixel-ratio: 1),
   (-webkit-min-device-pixel-ratio: 1),
   (min-resolution: 96dpi),

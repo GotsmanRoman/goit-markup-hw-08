@@ -4,6 +4,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 165px;
+    row-gap: 60px;
+    
+  }
 }
 .footer-address {
   text-align: center;
@@ -11,3 +21,46 @@
 }
 
 
+.footer-contacts {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  margin-top: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  &__item {
+    color: $grey-color;
+
+
+    &--active {
+      color: $blue-color;
+    }
+  }
+  &__icon {
+    display: none;
+    fill: $grey-color;
+    transition: fill 250ms ease-in;
+
+    .contacts-list__link:hover &,
+    .contacts-list__link:focus & {
+      fill: $blue-color;
+    }
+  }
+  &__link {
+    transition: color 250ms ease-in;
+
+    &:hover,
+    &:focus {
+      color: $blue-color;
+    }
+    &--accent {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}

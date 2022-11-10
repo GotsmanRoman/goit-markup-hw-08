@@ -6,7 +6,7 @@
 .team-list {
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
 
   &__item {
@@ -27,9 +27,21 @@
     &:last-child {
       margin-right: 0;
     }
+    @media screen and (min-width: 768px) {
+      & {
+          width: 354px;
+      }
   }
+}
   &__image {
     display: block;
+
+    @media screen and (min-width: 768px) {
+      & {
+          width: 354px;
+          height: 374px;
+      }
+  }
   }
   &__meta {
     padding: 30px 5px 0 5px; /* додадковий відступ всередені картки для імені та посади */

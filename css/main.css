@@ -379,10 +379,15 @@ a {
 .nav-list__item--active {
   color: #2196f3;
 }
+.nav-list__item:focus {
+  color: #2196f3;
+  font-size: 33px;
+}
 .nav-list__link {
   transition: color 250ms ease-in;
+  color: inherit;
 }
-.nav-list__item:hover .nav-list__link, .nav-list__item:focus .nav-list__link {
+.nav-list__link:hover, .nav-list__link:focus {
   color: #2196f3;
 }
 @media screen and (min-width: 768px) {
@@ -495,7 +500,7 @@ a {
 .contacts-list__link {
   transition: color 250ms ease-in;
 }
-.contacts-list__item:hover .contacts-list__link, .contacts-list__item:focus .contacts-list__link {
+.contacts-list__link:hover, .contacts-list__link:focus {
   color: #2196f3;
 }
 .contacts-list__link--accent {
@@ -504,6 +509,7 @@ a {
 @media screen and (min-width: 768px) {
   .contacts-list__link {
     display: flex;
+    align-items: center;
     gap: 8px;
   }
 }
@@ -525,6 +531,12 @@ a {
   color: #ffffff;
 }
 @media screen and (min-width: 768px) {
+  .hero__text {
+    font-size: 26px;
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .hero__text {
     font-size: 44px;
     line-height: 1.36;
@@ -554,8 +566,8 @@ a {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   left: 50%;
   top: 50%;
   opacity: 1;
@@ -574,34 +586,15 @@ a {
 .modal__header {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-}
-@media screen and (max-width: 767px) {
-  .modal__header {
-    line-height: 1.5;
-  }
-}
-@media screen and (max-width: 767px) {
-  .modal {
-    width: 450px;
-    height: 609px;
-  }
 }
 
 .modal-list {
   margin-top: 30px;
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .modal-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }
 .modal-list__item {
   position: relative;
@@ -713,15 +706,9 @@ a {
   margin-left: 8px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
-}
-@media screen and (min-width: 768px) {
-  .modal-list__text {
-    font-size: 14px;
-    line-height: 1.71;
-  }
 }
 .modal-list__link {
   text-decoration: underline;
@@ -785,8 +772,26 @@ a {
 
 .features {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .features__item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: 354px;
+  }
 }
 .features__icon-container {
   display: flex;
@@ -852,7 +857,7 @@ a {
 .team-list {
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .team-list__item {
@@ -869,8 +874,19 @@ a {
 .team-list__item:last-child {
   margin-right: 0;
 }
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    width: 354px;
+  }
+}
 .team-list__image {
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .team-list__image {
+    width: 354px;
+    height: 374px;
+  }
 }
 .team-list__meta {
   padding: 30px 5px 0 5px; /* додадковий відступ всередені картки для імені та посади */
@@ -922,7 +938,7 @@ a {
   transition: text-decoration-color 250ms ease-in;
   transition: text-decoration-color 250ms ease-in, -webkit-text-decoration-color 250ms ease-in;
 }
-.socials-text__item:hover .socials-text__link, .socials-text__item:focus .socials-text__link {
+.socials-text__link:hover, .socials-text__link:focus {
   -webkit-text-decoration-color: #2196f3;
           text-decoration-color: #2196f3;
 }
@@ -980,8 +996,17 @@ a {
 }
 
 .social-block {
-  margin-top: 60px;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .social-block {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .social-block {
+    margin-top: 5px;
+  }
 }
 .social-block__header {
   text-transform: uppercase;
@@ -1040,10 +1065,57 @@ a {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    -moz-column-gap: 165px;
+         column-gap: 165px;
+    row-gap: 60px;
+  }
+}
 
 .footer-address {
   text-align: center;
   width: 231px;
+}
+
+.footer-contacts {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.footer-contacts__item {
+  color: #757575;
+}
+.footer-contacts__item--active {
+  color: #2196f3;
+}
+.footer-contacts__icon {
+  display: none;
+  fill: #757575;
+  transition: fill 250ms ease-in;
+}
+.contacts-list__link:hover .footer-contacts__icon, .contacts-list__link:focus .footer-contacts__icon {
+  fill: #2196f3;
+}
+.footer-contacts__link {
+  transition: color 250ms ease-in;
+}
+.footer-contacts__link:hover, .footer-contacts__link:focus {
+  color: #2196f3;
+}
+.footer-contacts__link--accent {
+  color: rgb(255, 255, 255);
 }
 
 .button {
@@ -1062,13 +1134,6 @@ a {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (min-width: 768px) {
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 .button:hover {
   background-color: #188ce8;
@@ -1250,7 +1315,7 @@ body {
 }
 
 .container {
-  padding: 0 15px 0 15px;
+  padding: 0 15px;
   margin: 0 auto;
   height: 100%;
 }
@@ -1260,6 +1325,11 @@ body {
 }
 .section--header {
   height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .section--header {
+    height: 80px;
+  }
 }
 .section--header--portfolio {
   border-bottom: 1px solid #ececec;
@@ -1327,21 +1397,21 @@ body {
     background-size: cover;
   }
 }
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 1), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 769px) and (min-resolution: 96dpi), screen and (min-width: 769px) and (min-resolution: 1dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-width: 1200px) and (min-resolution: 96dpi), screen and (min-width: 1200px) and (min-resolution: 1dppx) {
   .section--hero {
     height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bg_1600.jpg);
     background-size: cover;
   }
 }
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .section--hero {
     height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bg_1600_2x.jpg);
     background-size: cover;
   }
 }
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 3), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 769px) and (min-resolution: 288dpi), screen and (min-width: 769px) and (min-resolution: 3dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   .section--hero {
     height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_bg_1600_3x.jpg);
