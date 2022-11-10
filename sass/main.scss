@@ -32,10 +32,18 @@ body {
   margin: 0 auto;
   height: 100%;
 
+  
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 .section {
   padding: 60px 0;
 
+
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
   &--header {
     height: 60px;
 
@@ -75,6 +83,14 @@ body {
     background-position: center;
     background-size: 480px 400px;
     }
+  &--job {
+    display: none;
+    padding-top: 0;
+    
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }  
   &--resets {
     padding: 0;
   }
@@ -97,6 +113,12 @@ body {
   @media screen and (min-width: 768px) {
     & {
       font-size: 36px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      font-size: 36px;
+      line-height: 1.17;
     }
   }
 }

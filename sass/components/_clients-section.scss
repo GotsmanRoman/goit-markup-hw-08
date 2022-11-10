@@ -6,6 +6,10 @@
   flex-wrap: wrap;
   gap: 30px;
 
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 50px;
+  }
   &__link {
     display: flex;
     width: 210px;
@@ -22,6 +26,11 @@
     @media screen and (min-width: 768px){
       &{
         width: 226px;
+      }
+    }
+    @media screen and (min-width: 1200px){
+      &{
+        width: 170px;
       }
     }
 

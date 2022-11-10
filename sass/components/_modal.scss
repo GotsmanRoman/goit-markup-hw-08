@@ -38,6 +38,11 @@
   
   @include transition(transform opacity);
 
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
   &--hidden {
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.15);
@@ -50,7 +55,9 @@
     letter-spacing: 0.03em;
     color: $black-color;
     
-
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
   }
 }
 
@@ -165,6 +172,11 @@
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: $grey-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
   &__link {
     text-decoration: underline;
@@ -177,6 +189,10 @@
     &--policy {
       display: flex;
       align-items: center;
+
+      @media screen and (min-width: 1200px) {
+        justify-content: center;
+      }
     }
   }
 }

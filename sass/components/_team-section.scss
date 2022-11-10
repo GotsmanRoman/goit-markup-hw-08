@@ -28,20 +28,23 @@
       margin-right: 0;
     }
     @media screen and (min-width: 768px) {
-      & {
-          width: 354px;
-      }
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
-}
   &__image {
     display: block;
 
     @media screen and (min-width: 768px) {
-      & {
-          width: 354px;
-          height: 374px;
-      }
-  }
+      width: 354px;
+      height: 374px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      height: 260px;
+    }
   }
   &__meta {
     padding: 30px 5px 0 5px; /* додадковий відступ всередені картки для імені та посади */
