@@ -7,6 +7,10 @@
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.6);
 
+
+  @media screen and (max-width: 479px) {
+    font-size: 20px;
+  }
   @media screen and (min-width: 768px){ 
     display: flex;
     height: 100%;
@@ -25,12 +29,14 @@
     gap: 30px;
   }
   &--mobile {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+      text-align: left;
+      margin-top: 40%;
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-top: 48px;
-      margin-left: 40px;
       gap: 32px;
       margin-top: 302px;
     }
@@ -56,11 +62,19 @@
       color: $blue-color;
     }
     &--accent {
-      @media screen and (max-width: 767px) {
-        font-size: 34px;
+
+      
+
+      @media screen and (min-width: 320px) and (max-width: 767px) {
         line-height: 1.17;
         letter-spacing: 0.02em;
         color: #2196F3;
+        font-size: 27px;
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: 480px) {
+        font-size: 34px;
+
       }
     }
     &--footer {

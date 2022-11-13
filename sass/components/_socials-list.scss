@@ -3,28 +3,35 @@
 .socials-text {
   display: none;
   margin-top: 64px;
-  justify-content: center;
+  margin-left: 40px;
 
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #2196F3;
+  color: #2196f3;
 
+
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+  @media screen and (max-width: 568px) {
+    margin-left: 0px;
+  }
   @media screen and (max-width: 767px) {
-    &{
+    & {
       display: flex;
+      gap: 10px;
     }
   }
-
 
   &__item {
     display: block;
     height: 22px;
-    padding: 0 10px;
-    
+    padding-right: 10px;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       border-right: 1px solid rgba(33, 33, 33, 0.2);
     }
   }
@@ -34,7 +41,6 @@
     text-underline-offset: 7px;
     transition: text-decoration-color 250ms ease-in;
 
-    
     &:hover,
     &:focus {
       text-decoration-color: $blue-color;
@@ -45,7 +51,6 @@
   display: flex;
   justify-content: space-between;
   width: 206px;
-  
 
   &--team {
     margin-top: 16px;
@@ -55,7 +60,7 @@
     width: 206px;
     padding: 0;
     margin-top: 20px;
-    }
+  }
   &__link {
     display: flex;
     height: 44px;
@@ -84,7 +89,6 @@
 
     @include transition(fill);
 
-
     .socials-list__link:hover & {
       fill: $white-color;
     }
@@ -97,15 +101,17 @@
   }
 }
 .social-block {
-
   text-align: center;
-
 
   @media screen and (max-width: 767px) {
     margin-top: 60px;
   }
   @media screen and (min-width: 768px) {
     margin-top: 5px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    margin-top: 12px;
   }
   &__header {
     text-transform: uppercase;
@@ -116,4 +122,3 @@
     color: $white-color;
   }
 }
-

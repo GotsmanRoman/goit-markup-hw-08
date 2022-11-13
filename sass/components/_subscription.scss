@@ -5,8 +5,12 @@
   width: 100%;
   text-align: center;
 
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+    text-align: left;
+    margin-left: 93px;
+  }
   &__header {
-
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
@@ -21,7 +25,9 @@
   flex-direction: column;
   align-items: center;
 
-
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
   &__input {
     width: 100%;
     max-width: 480px;
@@ -41,10 +47,13 @@
 
     @include transition(border-color);
 
-
     &:hover,
     &:focus {
       border-color: $blue-color;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
     }
   }
 }

@@ -1,12 +1,21 @@
 @use "../utils/variables" as *;
 
 .clients-list {
-  display: flex;
+  // display: flex;
+  // flex-wrap: wrap;
+  // gap: 30px;
   margin-top: 30px;
-  flex-wrap: wrap;
-  gap: 30px;
 
 
+  @media screen and (max-width: 479px) {
+    display: inline-block;
+    margin-bottom: -30px;
+  }
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
   @media screen and (min-width: 1200px) {
     margin-top: 50px;
   }
@@ -40,6 +49,11 @@
     &:focus {
       border-color: $blue-color;
       outline: none;
+    }
+  }
+  &__item {
+    @media screen and (max-width: 479px) {
+      margin-bottom: 30px;
     }
   }
   &__icon {
