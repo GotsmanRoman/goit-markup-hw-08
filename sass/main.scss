@@ -55,9 +55,7 @@ body.modal-open {
     height: 60px;
 
     @media screen and (min-width: 768px) {
-      & {
         height: 80px;
-      }
     }
     &--portfolio {
       border-bottom: 1px solid #ececec;
@@ -69,11 +67,8 @@ body.modal-open {
   &--features {
   }
   &--footer {
-    // padding-top: 60px;
-    // padding-bottom: 60px;
-
     background-color: $header-footer-color;
-
+    padding: 60px 0;
   }
   &--hero {
     height: 400px;
@@ -119,15 +114,7 @@ body.modal-open {
   letter-spacing: 0.03em;
 
   @media screen and (min-width: 768px) {
-    & {
       font-size: 36px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    & {
-      font-size: 36px;
-      line-height: 1.17;
-    }
   }
 }
 

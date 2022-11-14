@@ -6,56 +6,22 @@
   gap: 30px;
 
 
-  // @media screen and (max-width: 767px) {
-  //   &--margins-reset {
-  //       margin-top: -30px;
-  //   }
-  // }
-  // @media screen and (min-width: 768px) {
-  //   & {
-  //       display: flex;
-  //       flex-wrap: wrap;
-  //       gap: 30px;
-  //   }
-  // }
     @media screen and (min-width: 768px) {
-      & {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 30px;
-    }
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 30px;
   }
   &__item {
 
-
-    // @media screen and (max-width: 767px) {
-    //   & {
-    //       margin-top: 30px;
-    //   }
-    // }
-        @media screen and (max-width: 767px) {
-      & {
-        width: 100%;
-      }
+    @media screen and (max-width: 767px) {
+      width: 100%;
     }
-        // @media screen and (max-width: 767px) {
-    //   & {
-    //       margin-top: 30px;
-    //   }
-    // }
-  
     @media screen and (min-width: 768px) {
-      & {
-        width: 354px;
-      }
+      width: 354px;
     }
     @media screen and (min-width: 1200px) {
-      & {
-        width: 270px;
-      }
-    }
-    &:last-child {
+      width: 270px;
     }
   }
   &__icon-container {
@@ -75,15 +41,9 @@
     letter-spacing: 0.03em;
     text-align: center;
 
-    // @media screen and (min-width: 768px) {
-    //   & {
-    //     text-align: left;
-    //   }
-    // }
-        @media screen and (min-width: 1200px) {
-      & {
-        text-align: left;
-      }
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
     }
   }
   &__text {

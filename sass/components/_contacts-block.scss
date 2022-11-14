@@ -3,7 +3,7 @@
 .contacts-list {
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.6);
 
@@ -13,15 +13,11 @@
   }
   @media screen and (min-width: 768px){ 
     display: flex;
-    height: 100%;
     flex-direction: column-reverse;
     justify-content: center;
     gap: 10px;
 
-    font-weight: 500;
     font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
   }
   @media screen and (min-width: 1200px){ 
     flex-direction: row-reverse;
@@ -41,19 +37,6 @@
       margin-top: 302px;
     }
   }
-  &--footer {
-    @media screen and (max-width: 767px) {
-      margin-top: 20px;
-
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.71;
-      text-align: center;
-      letter-spacing: 0.03em;
-    }
-  }
-
   &__item {
     color: $grey-color;
 
@@ -62,39 +45,25 @@
       color: $blue-color;
     }
     &--accent {
-
-      
-
-      @media screen and (min-width: 320px) and (max-width: 767px) {
-        line-height: 1.17;
-        letter-spacing: 0.02em;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      @media screen and (max-width: 479px) {
+        margin-bottom: 32px;
+      }
+      @media screen and (max-width: 767px) {
         color: #2196F3;
         font-size: 27px;
-        margin-bottom: 10px;
       }
-      @media screen and (min-width: 480px) {
+      @media screen and (min-width: 480px) and (max-width: 767px) {
         font-size: 34px;
-
       }
-    }
-    &--footer {
-      @media screen and (max-width: 767px) {
-        &:not(:last-child){
-          margin-bottom: 8px;
-        }
-      }
-    }
-    @media screen and (min-width: 768px){
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 1.16;
-      letter-spacing: 0.02em;
     }
   }
   &__icon {
     display: none;
     fill: $grey-color;
-    transition: fill 250ms ease-in;
+
+    @include transition(fill);
 
     .contacts-list__link:hover &,
     .contacts-list__link:focus & {

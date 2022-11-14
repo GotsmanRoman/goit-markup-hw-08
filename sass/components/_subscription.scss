@@ -5,6 +5,7 @@
   width: 100%;
   text-align: center;
 
+
   @media screen and (min-width: 1200px) {
     margin-top: 12px;
     text-align: left;
@@ -52,6 +53,7 @@
       border-color: $blue-color;
     }
 
+    
     @media screen and (min-width: 1200px) {
       width: 358px;
     }

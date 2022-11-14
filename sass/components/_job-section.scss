@@ -3,15 +3,10 @@
 .job {
   display: flex;
   margin-top: 50px;
-
+  gap: 30px;
 
   &__item {
-    margin-right: 30px;
     position: relative;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
   &__image,
   &__link {

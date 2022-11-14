@@ -139,11 +139,20 @@
               <a class="projects-list__link" href="#">
                 <div class="projects-list__container">
                   <img
-                    src="./images/project1.jpg"
+                    srcset="
+                    ./images/project1_480.jpg 450w,
+                    ./images/project1_480_2x.jpg 900w,
+                    ./images/project1_768.jpg 354w,
+                    ./images/project1_768_2x.jpg 708w,
+                    ./images/project1_1200.jpg 370w,
+                    ./images/project1_1200_2x.jpg 740w,
+                    "
+                    src="./images/project1_480.jpg"
                     alt="Веб-сайт Технокряк"
                     width="450"
                     height="294"
                     class="projects-list__image"
+                    sizes="(min-width: 1200px) 30vw, (min-width: 768px) 50vw, (min-width: 480px) 100vw"
                   />
                   <div class="projects-list__overlay">
                     <p class="projects-list__description">

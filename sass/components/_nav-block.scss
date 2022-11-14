@@ -17,7 +17,7 @@
   color: $white-color;
 }
 .menu-button {
-  display: inline-flex;
+  display: flex;
   padding: 0;
   margin: 0;
   border: none;
@@ -28,7 +28,7 @@
   &__icon-cross {
     display: none;
 
-    transition: fill 250ms ease-in;
+    @include transition(fill);
 
     .menu-button.is-open & {
       display: block;
@@ -39,7 +39,7 @@
     }
   }
   &__icon-menu {
-    transition: fill 250ms ease-in;
+    @include transition(fill);
 
     .menu-button.is-open & {
       display: none;
@@ -50,9 +50,7 @@
     }
   }
   @media screen and (min-width: 768px) {
-    & {
-      display: none;
-    }
+    display: none;
   }
 }
 .menu-container {
@@ -69,7 +67,6 @@
 
   @media screen and (max-width: 479px) {
     padding: 40px 15px;
-    
   }
   @media screen and (min-width: 480px) {
     height: 796px;
@@ -79,43 +76,56 @@
   }
 
   @media screen and (min-width: 768px) {
-    & {
       height: 100%;
       position: static;
       display: flex;
-      margin: 0;
       padding: 0;
       margin-left: 87px;
       justify-content: space-between;
-    }
+
     &.is-open {
       display: flex;
     }
   }
   @media screen and (min-width: 1200px) {
-    & {
       margin-left: 92px;
-    }
   }
 }
 .nav-list {
   font-weight: 500;
   font-size: 40px;
-  line-height: 47px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.02em;
 
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  &--mobile {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+  }
   &__item {
-    // &--active {
-    //   color: $blue-color;
-    // }
     &:focus {
       color: $blue-color;
       font-size: 33px;
     }
   }
   &__link {
-    transition: color 250ms ease-in;
+    @include transition(color);
     color: inherit;
     position: relative;
 
@@ -125,45 +135,22 @@
     }
     &--active {
       color: $blue-color;
-    }
 
-    @media screen and (min-width: 768px) {
-      &--active::after {
-        content: "";
-        width: 100%;
-        height: 4px;
-        position: absolute;
-        left: 50%;
-        bottom: -32px;
-
-        border-radius: 4px;
-        background-color: $blue-color;
-
-        transform: translateX(-50%);
+      @media screen and (min-width: 768px) {
+        &::after {
+          content: "";
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          left: 50%;
+          bottom: -32px;
+  
+          border-radius: 4px;
+          background-color: $blue-color;
+  
+          transform: translateX(-50%);
+        }
       }
-    }
-  }
-  @media screen and (min-width: 768px) {
-    & {
-      display: flex;
-      flex-direction: row;
-      margin: 0;
-      padding: 0;
-      gap: 50px;
-      align-items: center;
-
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    &--mobile {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 32px;
     }
   }
 }
